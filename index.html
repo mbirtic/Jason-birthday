@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Happy 28th Birthday Jason!!</title>
-	<style type="text/css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy 28th Birthday Jason!!</title>
+  <style type="text/css">
     /* Ensure box-sizing is border-box for all elements */
     *, *::before, *::after {
       box-sizing: border-box;
@@ -17,58 +16,28 @@
       font-family: 'Poppins', sans-serif;
       color: #c8a2c8; /* Default text color */
       position: relative;
-      overflow-x: hidden; /* Prevents horizontal scroll */
+      overflow: hidden; /* Prevents overflow */
     }
 
-    /* Background images and styles for large screens */
+    /* Background and container styling */
     body {
       background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
       background-color: #15001A; /* Black background */
-      background-position: left top, right top; /* Aligns the background images to the left and right */
+      background-size: cover;
+      background-position: center;
       background-repeat: no-repeat;
-      background-size: cover; /* Adjusts the size of the background to cover the full screen */
-      background-image: url('slika.png'), url('slika.png'); /* Replace with your PNG file paths */
-      padding: 0;
-      margin: 0;
-      overflow-x: hidden; /* Prevents horizontal scroll */
-    }
-
-    /* Add PNGs to the sides using absolute positioning */
-    .left-image, .right-image {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: -1; /* Ensures the images stay in the background */
-    }
-
-    .left-image {
-      left: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .right-image {
-      right: 0;
-      transition: opacity 0.3s ease;
-    }
-    
-    .left-image:hover, .right-image:hover {
-      opacity: 0.7;
     }
 
     .container {
-      max-width: 100%;
       width: 100%;
       height: 80vh;
       max-height: 80%; /* Optional: limits the height */
-      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow around the container */
-      padding: 10px; /* Reduce padding for mobile screens */
-      margin: 0; /* Remove margin */
+      margin: 0 auto;
+      padding: 10px;
+      text-align: center; /* Centers content */
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
       border-radius: 12px;
-      position: relative;
-      z-index: 1;
-      text-align: center; /* Centers content inside the container */
-      margin: 0 auto; /* Centers the container horizontally */
-      overflow: hidden; /* Ensures no overflow within the container */
+      overflow: hidden; /* Ensures no overflow */
     }
 
     video {
@@ -76,8 +45,8 @@
       max-width: 100%;
       max-height: 500px;
       height: auto;
-      margin-bottom: 20px; /* Space between video and text */
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Soft shadow for the video */
+      margin-bottom: 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     }
 
     h1 {
@@ -89,37 +58,23 @@
       h1 {
         font-size: 1.5rem; /* Smaller text on smaller screens */
       }
-
-      /* Hide background image and PNG images on smaller screens */
       body {
-        background-image: none; /* Remove background image */
-      }
-
-      .left-image, .right-image {
-        display: none; /* Hides the images on smaller screens for better mobile usability */
+        background-image: none; /* Remove background image for small screens */
       }
     }
 
-</style>
+  </style>
 </head>
 
 <body>
 
-    <!-- PNG images on the sides -->
-    <img src="slika.png" alt="Left Side Image" class="left-image">
-    <img src="slika.png" alt="Right Side Image" class="right-image">
-
-    <div class="container">
-	<br>
-	<h1>💕HAPPY BIRTHDAY BABY!💕</h1>
-	
-	<br>
-	
-	<video controls>
-    		<source src="jason_birthday.mp4" type="video/mp4">
-    		Your browser does not support the video tag.
-	</video>
-    </div>
-	
+  <div class="container">
+    <h1>💕HAPPY BIRTHDAY BABY!💕</h1>
+    <video controls>
+      <source src="jason_birthday.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  
 </body>
 </html>

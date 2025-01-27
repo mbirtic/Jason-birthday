@@ -27,27 +27,6 @@
 
     }
 
-    /* Add PNGs to the sides using absolute positioning */
-    .left-image, .right-image {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: -1; /* Ensures the images stay in the background */
-    }
-
-    .left-image {
-      left: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .right-image {
-      right: 0;
-      transition: opacity 0.3s ease;
-    }
-    
-    .left-image:hover, .right-image:hover {
-      opacity: 0.7;
-    }
 
     .container {
       max-width: 100%;
@@ -95,10 +74,6 @@
 </head>
 
 <body>
-
-    <!-- PNG images on the sides -->
-    <img src="slika.png" alt="Left Side Image" class="left-image">
-    <img src="slika.png" alt="Right Side Image" class="right-image">
 
     <div class="container">
 	<h1>💕HAPPY BIRTHDAY BABY!💕</h1>

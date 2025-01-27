@@ -9,16 +9,19 @@
     body, html {
       height: 100%;
       margin: 0;
-      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
       font-family: 'Poppins', sans-serif;
+      color: #c8a2c8; /* Default text color */
+      position: relative;
+    }
+
+    /* Background images and styles for large screens */
+    body {
+      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
       background-color: #15001A; /* Black background */
       background-position: left top, right top; /* Aligns the background images to the left and right */
       background-repeat: no-repeat;
       background-size: contain; /* Adjusts the size of the images */
       background-image: url('slika.png'), url('slika.png'); /* Replace with your PNG file paths */
-      color: #c8a2c8; /* Default text color */
-      position: relative;
-
     }
 
     /* Add PNGs to the sides using absolute positioning */
@@ -56,7 +59,6 @@
       margin: 0 auto; /* Centers the container horizontally */
     }
 
-
     video {
       width: 100%;
       max-width: 600px; /* Set a maximum width for the video */
@@ -75,8 +77,9 @@
         font-size: 1.5rem; /* Smaller text on smaller screens */
       }
 
+      /* Hide background image and PNG images on smaller screens */
       body {
-        background-image: none;
+        background-image: none; /* Remove background image */
       }
 
       .left-image, .right-image {
@@ -102,8 +105,6 @@
     		<source src="jason_birthday.mp4" type="video/mp4">
     		Your browser does not support the video tag.
 	</video>
-
-	
     </div>
 	
 </body>

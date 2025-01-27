@@ -6,12 +6,18 @@
 	<title>Happy 28th Birthday Jason!!</title>
 	<style type="text/css">
 
+    /* Ensure box-sizing is border-box for all elements */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
     body, html {
       height: 100%;
       margin: 0;
       font-family: 'Poppins', sans-serif;
       color: #c8a2c8; /* Default text color */
       position: relative;
+      overflow-x: hidden; /* Prevents horizontal scroll */
     }
 
     /* Background images and styles for large screens */
@@ -63,6 +69,7 @@
       width: 100%;
       max-width: 600px; /* Set a maximum width for the video */
       height: auto;
+      max-height: 500px; /* Ensure the video is not too tall */
       margin-bottom: 20px; /* Space between video and text */
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Soft shadow for the video */
     }

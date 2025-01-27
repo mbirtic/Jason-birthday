@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Happy 28th Birthday Jason!!</title>
-	<style type="text/css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy 28th Birthday Jason!!</title>
+  <style type="text/css">
     body, html {
       height: 100%;
       margin: 0;
@@ -14,11 +13,10 @@
       background-color: #15001A; /* Black background */
       background-position: left top, right top; /* Aligns the background images to the left and right */
       background-repeat: no-repeat;
-      background-size: contain; /* Adjusts the size of the images */
+      background-size: cover; /* Ensures full screen background */
       background-image: url('slika.png'), url('slika.png'); /* Replace with your PNG file paths */
       color: #c8a2c8; /* Default text color */
       position: relative;
-
     }
 
     /* Add PNGs to the sides using absolute positioning */
@@ -31,14 +29,16 @@
 
     .left-image {
       left: 0;
+      width: 20%; /* Adjust the size of the image */
       transition: opacity 0.3s ease;
     }
 
     .right-image {
       right: 0;
+      width: 20%; /* Adjust the size of the image */
       transition: opacity 0.3s ease;
     }
-    
+
     .left-image:hover, .right-image:hover {
       opacity: 0.7;
     }
@@ -48,7 +48,7 @@
       width: 90%; /* Makes the container responsive */
       max-height: 80%; /* Optional: limits the height */
       box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow around the container */
-      padding: 40px;
+      padding: 20px;
       border-radius: 12px;
       position: relative;
       z-index: 1;
@@ -56,13 +56,10 @@
       margin: 0 auto; /* Centers the container horizontally */
     }
 
-
     video {
       width: 100%;
-      max-width: 600px; /* Set a maximum width for the video */
-      max-height: 500px;
-
-      
+      max-width: 100%; /* Make sure video scales responsively */
+      height: auto; /* Ensure the aspect ratio is preserved */
       margin-bottom: 20px; /* Space between video and text */
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Soft shadow for the video */
     }
@@ -81,27 +78,26 @@
       }
     }
 
-</style>
+  </style>
 </head>
 
 <body>
 
-    <!-- PNG images on the sides -->
-    <img src="slika.png" alt="Left Side Image" class="left-image">
-    <img src="slika.png" alt="Right Side Image" class="right-image">
+  <!-- PNG images on the sides -->
+  <img src="slika.png" alt="Left Side Image" class="left-image">
+  <img src="slika.png" alt="Right Side Image" class="right-image">
 
-    <div class="container">
-	<br>
-	<h1>💕HAPPY BIRTHDAY BABY!💕</h1>
-	<br>
-	
-	<video controls>
-    		<source src="jason_birthday.mp4" type="video/mp4">
-    		Your browser does not support the video tag.
-	</video>
+  <div class="container">
+    <br>
+    <h1>💕HAPPY BIRTHDAY BABY!💕</h1>
+    <br>
+    
+    <video controls>
+      <source src="jason_birthday.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
 
-	
-    </div>
-	
+  </div>
+
 </body>
 </html>

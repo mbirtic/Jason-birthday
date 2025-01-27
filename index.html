@@ -20,34 +20,35 @@
       overflow-x: hidden; /* Prevents horizontal scroll */
     }
 
-    /* Background styles for large screens */
+    /* Background images and styles for large screens */
     body {
       background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
       background-color: #15001A; /* Black background */
-      background-position: left center, right center; /* Aligns the background images to the left and right */
+      background-position: left top, right top; /* Aligns the background images to the left and right */
       background-repeat: no-repeat;
-      background-size: contain; /* Ensures the image fits properly without repeating */
+      background-size: cover; /* Adjusts the size of the background to cover the full screen */
+      background-image: url('slika.png'), url('slika.png'); /* Replace with your PNG file paths */
       padding: 0;
       margin: 0;
+      overflow-x: hidden; /* Prevents horizontal scroll */
     }
 
     /* Add PNGs to the sides using absolute positioning */
     .left-image, .right-image {
-      position: fixed; /* Fixed positioning ensures they stay on the sides */
+      position: absolute;
       top: 50%;
       transform: translateY(-50%);
       z-index: -1; /* Ensures the images stay in the background */
-      max-height: 100vh; /* Ensure the images are within the height of the screen */
     }
 
     .left-image {
       left: 0;
-      width: 10vw; /* Adjust size as needed */
+      transition: opacity 0.3s ease;
     }
 
     .right-image {
       right: 0;
-      width: 10vw; /* Adjust size as needed */
+      transition: opacity 0.3s ease;
     }
     
     .left-image:hover, .right-image:hover {
@@ -58,13 +59,15 @@
       max-width: 100%;
       width: 100%;
       height: 80vh;
+      max-height: 80%; /* Optional: limits the height */
       box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow around the container */
-      padding: 10px;
-      margin: 0 auto;
+      padding: 10px; /* Reduce padding for mobile screens */
+      margin: 0; /* Remove margin */
       border-radius: 12px;
       position: relative;
       z-index: 1;
-      text-align: center;
+      text-align: center; /* Centers content inside the container */
+      margin: 0 auto; /* Centers the container horizontally */
       overflow: hidden; /* Ensures no overflow within the container */
     }
 
@@ -73,7 +76,7 @@
       max-width: 100%;
       max-height: 500px;
       height: auto;
-      margin-bottom: 20px;
+      margin-bottom: 20px; /* Space between video and text */
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Soft shadow for the video */
     }
 
@@ -93,7 +96,7 @@
       }
 
       .left-image, .right-image {
-        display: none; /* Hides the images on smaller screens */
+        display: none; /* Hides the images on smaller screens for better mobile usability */
       }
     }
 
